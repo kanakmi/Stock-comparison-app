@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Streamlit App",
+    page_title="Stock Comparison App",
     page_icon="❄️",
     initial_sidebar_state="expanded"
 )

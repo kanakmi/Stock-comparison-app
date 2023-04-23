@@ -135,6 +135,7 @@ def get_data_from_snowflake(ticker, start_date, end_date):
         df = pd.DataFrame(result)
         df.columns = result[0].keys()
         df = df.sort_values(by=['Date'])
+    conn.dispose()
     return df
 
 if __name__ == "__main__":
