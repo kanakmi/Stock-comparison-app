@@ -21,7 +21,8 @@ def main():
             df = get_data_from_snowflake(stock, start_date, end_date)
             st.balloons()
             render_ui(df, stock)
-        except:
+        except Exception as e:
+            print(e)
             st.error("Invalid Ticker, please try again", icon="🚨")
     else:
         st.info("Enter a Stock Ticker and Date Range to get started", icon="💡")

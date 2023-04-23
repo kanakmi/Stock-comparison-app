@@ -23,7 +23,8 @@ def main():
             data = get_stock_data(stocks_list, start_date, end_date)
             st.balloons()
             render_ui(data)
-        except:
+        except Exception as e:
+            print(e)
             st.error("Invalid Ticker, please try again", icon="🚨")
     else:
         st.info("Enter Stock Tickers and Date Range to get started", icon="💡")
