@@ -5,3 +5,4 @@ plotly==5.6.0
 sqlalchemy
 streamlit-extras
 snowflake-sqlalchemy
+scipy
