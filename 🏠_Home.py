@@ -1,3 +1,12 @@
+import streamlit as st
+
+st.set_page_config(
+    page_title="Streamlit App",
+    page_icon=":snow:",
+    initial_sidebar_state="expanded"
+)
+
+markdown = """
 # 📈 Stock Comparison App
 
 This app allows you to compare the performance of different stocks over time.
@@ -33,3 +42,8 @@ For each metric, the app provides an analysis of which stock performed better du
 - Improve error handling and user feedback.
 
 ---
+"""
+
+st.markdown(markdown, unsafe_allow_html=True)
+
+st.sidebar.subheader("Made with ❤️ by [Kanak](https://kanakmi.streamlit.app/)")
