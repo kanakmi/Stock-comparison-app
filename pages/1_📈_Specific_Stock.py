@@ -39,10 +39,10 @@ def render_ui(df, stock):
     c1, c2 = st.columns(2)
     c1.metric(label="Current Price", value=round(last_two_days.iloc[1]['Close'], 3), delta=str(change))
     c2.metric(label="Day Change", value=change, delta=str(change_percent)+"%")
-    c1.metric(label="Highest Price till date", value=round(df['High'].max(), 3))
-    c2.metric(label="Lowest Price till date", value=round(df['Low'].min(), 3))
-    c1.metric(label="Highest Single Day Profit", value=str(df['Daily_Return_Percent'].max())+"%")
-    c2.metric(label="Highest Single Day Loss", value=str(df['Daily_Return_Percent'].min())+"%")
+    c1.metric(label="Highest Price (in given date range)", value=round(df['High'].max(), 3))
+    c2.metric(label="Lowest Price (in given date range)", value=round(df['Low'].min(), 3))
+    c1.metric(label="Highest Single Day Profit (in given date range)", value=str(df['Daily_Return_Percent'].max())+"%")
+    c2.metric(label="Highest Single Day Loss (in given date range)", value=str(df['Daily_Return_Percent'].min())+"%")
 
     style_metric_cards()
 
